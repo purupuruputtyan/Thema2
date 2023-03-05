@@ -1,8 +1,13 @@
-<h2>Title: </h2>
-<p><%= @book.title %></p>
+<p id="notice"></p>
+<p>
+  <strong>Title: </strong>
+  <%= @book.title %>
+</p>
+<p>
+  <strong>Body: </stong>
+  <%= @book.body %>
+</p>
 
-<h2>Body: </h2>
-<p><%= @book.body %></p>
-
-<span><%= link_to "Edit", "/books/:id/edit" %></span>
-<span><%= link_to "Back", "/books" %></span>
+<%= link_to "Back", "/books" %>
+|
+<%= link_to "Back", "/books" %>
