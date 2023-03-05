@@ -1,5 +1,14 @@
 <p id="notice"></p>
 <p>
+<% if @book.errors.any? %>
+  <%= @book.errors.count %>blank error
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
   <strong>Title: </strong>
   <%= @book.title %>
 </p>
@@ -8,6 +17,6 @@
   <%= @book.body %>
 </p>
 
-<%= link_to "Edit", edit_book_path(@book.id) %>
+<%= link_to "Edit", "/books/#{@book.id}/edit" %>
 |
 <%= link_to "Back", "/books" %>
