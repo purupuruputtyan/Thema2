@@ -1,4 +1,9 @@
 <p id="notice"></p>
+
+<div class="text-success">
+  <%= flash[:notice] %>
+</div>
+
 <p>
 <% if @book.errors.any? %>
   <%= @book.errors.count %>blank error
